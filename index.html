@@ -1,0 +1,941 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lam Gia Kiet | Game Developer Engineer • Unity, C#, Meta Quest 3 VR</title>
+
+  <meta name="description"
+    content="Portfolio of Lam Gia Kiet - Game Developer Engineer specializing in Unity (C#), Meta Quest 3 VR optimization, gameplay systems, and extraction multiplayer mechanics. Shipped MVPs on itch.io.">
+  <meta name="keywords"
+    content="Lâm Gia Kiệt, Lam Gia Kiet, Game Developer, Unity Developer, Gameplay Programmer, VR Developer, Meta Quest 3, C# Programmer, Raider of Horizon, ChemiLab VR, PatchBrief">
+  <meta name="author" content="Lam Gia Kiet">
+  <meta name="theme-color" content="#080b10">
+
+  <!-- Open Graph / Social Media -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Lam Gia Kiet | Game Developer Engineer Portfolio">
+  <meta property="og:description"
+    content="Gameplay & Systems Developer. Unity (C#), Meta Quest 3 VR standalone optimization, and co-op extraction games.">
+  <meta property="og:image" content="assets/images/raiders_combat.jpg">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&family=Orbitron:wght@600;700;800;900&family=Syne:wght@600;700;800&display=swap"
+    rel="stylesheet">
+
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+  <!-- Cyber Visual Background Atmosphere -->
+  <div class="cyber-bg" aria-hidden="true"></div>
+  <div class="cyber-grid" aria-hidden="true"></div>
+  <div id="scanlinesOverlay" class="scanlines-overlay" aria-hidden="true"></div>
+
+  <!-- Main Navigation Bar -->
+  <header class="navbar" id="mainNavbar">
+    <div class="container nav-container">
+      <a href="#hero" class="nav-brand" id="navBrand">
+        <div class="brand-badge">GK</div>
+        <div class="brand-title">
+          <span class="brand-name">LAM GIA KIET</span>
+          <span class="brand-role">GAMEPLAY // SYSTEMS DEV</span>
+        </div>
+      </a>
+
+      <nav aria-label="Main Navigation">
+        <ul class="nav-links">
+          <li><a href="#hero" class="nav-link active" id="navLinkHome">Overview</a></li>
+          <li><a href="#game-lab" class="nav-link" id="navLinkLab">Engine Lab 🎮</a></li>
+          <li><a href="#projects" class="nav-link" id="navLinkProjects">Projects</a></li>
+          <li><a href="#skills" class="nav-link" id="navLinkSkills">Skills</a></li>
+          <li><a href="#experience" class="nav-link" id="navLinkExp">Experience</a></li>
+          <li><a href="#contact" class="nav-link" id="navLinkContact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-controls">
+        <!-- Audio Synthesizer Toggle -->
+        <button class="icon-btn is-active" id="muteToggleBtn" title="Toggle Procedural Audio FX (M)"
+          aria-label="Toggle Audio">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+            <path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"></path>
+          </svg>
+          <span class="audio-pulse" id="audioPulse"></span>
+        </button>
+
+        <!-- Scanline Shader Toggle -->
+        <button class="icon-btn" id="scanlineToggleBtn" title="Toggle CRT Scanline Shader"
+          aria-label="Toggle Scanlines">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+            <line x1="8" y1="21" x2="16" y2="21"></line>
+            <line x1="12" y1="17" x2="12" y2="21"></line>
+          </svg>
+        </button>
+
+        <!-- Direct Resume Download Button -->
+        <a href="Lam_Gia_Kiet_Resume.pdf" download="Lam_Gia_Kiet_Resume.pdf" class="btn btn-primary btn-sm"
+          id="navResumeLink">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+            <polyline points="7 10 12 15 17 10"></polyline>
+            <line x1="12" y1="15" x2="12" y2="3"></line>
+          </svg>
+          Resume (PDF)
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO SECTION -->
+    <section class="hero-section" id="hero">
+      <div class="container">
+        <div class="hero-grid">
+          <!-- Left Column: Pitch & Telemetry -->
+          <div class="hero-text-col">
+            <div class="hero-status-pill">
+              <span class="status-indicator"></span>
+              <span>AVAILABLE FOR GAME DEV ROLES • HO CHI MINH & REMOTE</span>
+            </div>
+
+            <h1 class="hero-title">
+              Hi, I'm Lam Gia Kiet.<br>
+              <span class="text-gradient">Game Developer Engineer</span>
+            </h1>
+
+            <p class="hero-tagline">
+              Unity (C#) • Meta Quest 3 VR Systems • Co-Op Gameplay Loops
+            </p>
+
+            <p class="hero-description">
+              Software Engineering undergraduate at <strong>FPT University</strong>. Creator of shipped indie MVPs
+              including the 4-player co-op extraction game <em>Raider Of Horizon</em> and solo VR puzzle
+              <em>ChemiLab</em>. Specialized in gameplay programming, standalone VR optimization (72 FPS budget),
+              low-poly 3D modeling, and deterministic telemetry rule engines.
+            </p>
+
+            <div class="hero-cta-group">
+              <a href="#game-lab" class="btn btn-primary" id="heroPlayBtn">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                </svg>
+                Play Engine Lab Demo
+              </a>
+
+              <a href="#projects" class="btn btn-secondary" id="heroViewProjectsBtn">
+                View Shipped Games
+              </a>
+
+              <a href="Lam_Gia_Kiet_Resume.pdf" target="_blank" class="btn btn-secondary" id="heroDownloadResumeBtn">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                  <polyline points="14 2 14 8 20 8"></polyline>
+                </svg>
+                View Resume
+              </a>
+            </div>
+
+            <!-- Telemetry Metrics Banner -->
+            <div class="hero-telemetry-strip">
+              <div class="telemetry-item">
+                <span class="telemetry-val">2+</span>
+                <span class="telemetry-label">Shipped MVPs (Itch.io)</span>
+              </div>
+              <div class="telemetry-item">
+                <span class="telemetry-val">72 FPS</span>
+                <span class="telemetry-label">Meta Quest 3 Profiling</span>
+              </div>
+              <div class="telemetry-item">
+                <span class="telemetry-val">8.8 / 9.0</span>
+                <span class="telemetry-label">Major Programming GPA</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Column: Stylized Developer Portrait & HUD Frame -->
+          <div class="hero-visual-col">
+            <div class="hero-visual-card">
+              <div class="portrait-frame">
+                <img src="assets/images/avatar.jpg?v=profile" alt="Lam Gia Kiet - Game Developer Engineer"
+                  class="portrait-img" loading="eager">
+                <div class="portrait-overlay-badge">
+                  <div>
+                    <div class="badge-info-name">Lam Gia Kiet</div>
+                    <div class="badge-info-sub">Gameplay & VR Engineer</div>
+                  </div>
+                  <span class="quest-tag">QUEST 3 • UNITY • C#</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Quick Specs HUD Bar below Hero -->
+        <div class="quick-hud-bar">
+          <div class="hud-item">
+            <span>ENGINE:</span> <strong>Unity (C#)</strong>
+          </div>
+          <div class="hud-item">
+            <span>3D PIPELINE:</span> <strong>Blender Low-Poly & Baking</strong>
+          </div>
+          <div class="hud-item">
+            <span>VR FOCUS:</span> <strong>Meta Quest 3 Standalone XR</strong>
+          </div>
+          <div class="hud-item">
+            <span>CLOUD & DATA:</span> <strong>AWS FCJ / C# .NET</strong>
+          </div>
+          <div class="hud-item">
+            <span>ENGLISH:</span> <strong>IELTS 6.5</strong>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- INTERACTIVE PLAYABLE GAME DEMO SECTION -->
+    <section class="section game-lab-section" id="game-lab">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">// INTERACTIVE GAMEPLAY ENGINE LAB</span>
+          <h2 class="section-title">Test Game-Feel In Real Time</h2>
+          <p class="section-subtitle">
+            Experience real-time vehicle physics, turret aiming, procedural particle sparks, screen-shake dynamics, and
+            synthesized Web Audio built directly into the browser.
+          </p>
+        </div>
+
+        <div class="game-console-card">
+          <!-- Console Top Bar -->
+          <div class="console-header">
+            <div class="console-title-group">
+              <div class="console-dots">
+                <span class="console-dot red"></span>
+                <span class="console-dot yellow"></span>
+                <span class="console-dot green"></span>
+              </div>
+              <span class="console-title">PROJECT HORIZON // ROVER SIMULATION MATRIX</span>
+              <span class="console-badge">STANDALONE CANVAS 2D</span>
+            </div>
+
+            <div class="console-telemetry-hud">
+              <span>FPS: <strong id="hudFps">60</strong></span>
+              <span>ENTITIES: <strong id="hudEntities">0</strong></span>
+              <span>SPEED: <strong id="hudSpeed">0</strong> KM/H</span>
+              <span>RELICS: <strong id="hudRelics">0</strong></span>
+            </div>
+          </div>
+
+          <!-- Canvas Screen -->
+          <div class="canvas-wrapper">
+            <canvas id="gameCanvas"></canvas>
+
+            <!-- Overlay HUD Gauges -->
+            <div class="game-overlay-hud">
+              <div class="hud-panel">
+                <div class="hud-title">VEHICLE SHIELD INTEGRITY</div>
+                <div class="hud-meter">
+                  <div class="hud-meter-fill" id="hudShieldFill" style="width: 100%;"></div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Key Bindings Instruction Bar -->
+            <div class="game-instructions-hud">
+              <div class="key-hints">
+                <span><span class="key-badge">W</span><span class="key-badge">A</span><span
+                    class="key-badge">S</span><span class="key-badge">D</span> Drive Rover</span>
+                <span><span class="key-badge">MOUSE</span> Aim Turret</span>
+                <span><span class="key-badge">LEFT CLICK</span> / <span class="key-badge">SPACE</span> Fire
+                  Cannons</span>
+                <span>Scavenge <strong style="color:#00f0ff;">Relic Shards</strong> for Shields</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Console Bottom Tuning Dock -->
+          <div class="console-dock">
+            <div class="tweak-controls">
+              <div class="tweak-group">
+                <label for="shakeIntensity">Screen Shake:</label>
+                <input type="range" id="shakeIntensity" min="0" max="100" value="50"
+                  aria-label="Screen Shake Intensity">
+              </div>
+
+              <div class="tweak-group">
+                <label for="particleMult">VFX Particles:</label>
+                <input type="range" id="particleMult" min="20" max="120" value="50" aria-label="Particle Multiplier">
+              </div>
+            </div>
+
+            <button class="btn btn-secondary btn-sm" id="resetGameBtn">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21.5 2v6h-6M21.34 15.57a10 10 0 1 1-.57-8.38l5.67-5.67"></path>
+              </svg>
+              Re-Deploy Vehicle
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FEATURED PROJECTS SHOWCASE -->
+    <section class="section" id="projects">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">// PORTFOLIO ARTIFACTS</span>
+          <h2 class="section-title">Featured Game Development Projects</h2>
+          <p class="section-subtitle">
+            From co-op action extraction to mobile standalone VR and cloud-integrated game telemetry tools.
+          </p>
+        </div>
+
+        <!-- Filter Buttons -->
+        <div class="projects-filter-bar">
+          <button class="filter-btn is-active" data-filter="all">All Projects</button>
+          <button class="filter-btn" data-filter="action">Co-Op Action</button>
+          <button class="filter-btn" data-filter="vr">Meta Quest 3 VR</button>
+          <button class="filter-btn" data-filter="tools">Game Dev Tools & Analytics</button>
+        </div>
+
+        <div class="projects-grid">
+
+          <!-- PROJECT 1: Raider Of Horizon -->
+          <article class="project-card" data-category="action all">
+            <div class="project-media-col">
+              <img src="assets/images/raiders_combat.jpg" alt="Raider Of Horizon - Co-op Extraction Game"
+                class="project-img">
+              <div class="project-media-badges">
+                <span class="media-tag highlight">1–4 PLAYER CO-OP</span>
+                <span class="media-tag">SHIPPED ON ITCH.IO</span>
+                <span class="media-tag">UNITY + TERRAIN TOOLS</span>
+              </div>
+              <div class="project-play-overlay">
+                <button class="btn btn-primary btn-sm" onclick="openProjectModal('raider')">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                  </svg>
+                  Watch Trailer & Architecture
+                </button>
+              </div>
+            </div>
+
+            <div class="project-content-col">
+              <div>
+                <span class="project-type-label">CO-OP EXTRACTION GAME (MVP)</span>
+                <h3 class="project-title">Raider Of Horizon</h3>
+                <p class="project-subtitle">High-Stakes Vehicle Expedition & Extraction Loop</p>
+                <p class="project-description">
+                  Co-developed a high-stakes co-op extraction expedition game. Teams pilot a shared heavy armored
+                  vehicle through treacherous hostile zones, scavenge volatile relics, survive relentless boss
+                  encounters, and extract back to the Hub before losing all loot upon death.
+                </p>
+
+                <ul class="tech-bullet-list">
+                  <li class="tech-bullet-item">
+                    <span class="bullet-icon">▸</span>
+                    <span><strong>Map Design & Environment:</strong> Owned level architecture; sculpted playable
+                      expedition zones with Unity Terrain Tools and custom Blender meshes. Shaped exploration paths,
+                      choke points, and tactical combat arenas.</span>
+                  </li>
+                  <li class="tech-bullet-item">
+                    <span class="bullet-icon">▸</span>
+                    <span><strong>Shared Expedition Vehicle:</strong> Engineered multi-crew vehicle physics, mobile
+                      turret hardpoints, cargo inventory storage, and mobile cover mechanics.</span>
+                  </li>
+                  <li class="tech-bullet-item">
+                    <span class="bullet-icon">▸</span>
+                    <span><strong>High-Tension Extraction Loop:</strong> Shipped downloadable MVP on itch.io featuring
+                      boss encounters (Void Stalker), Hub progression, and defined PC hardware performance
+                      profiles.</span>
+                  </li>
+                </ul>
+              </div>
+
+              <div>
+                <div class="tech-stack-tags">
+                  <span class="stack-tag">Unity</span>
+                  <span class="stack-tag">C#</span>
+                  <span class="stack-tag">Blender</span>
+                  <span class="stack-tag">Terrain Tools</span>
+                  <span class="stack-tag">Vehicle Physics</span>
+                  <span class="stack-tag">Itch.io</span>
+                </div>
+
+                <div class="project-actions">
+                  <button class="btn btn-primary btn-sm" onclick="openProjectModal('raider')">
+                    Read Case Study
+                  </button>
+                  <a href="https://monkz-dct.itch.io/raiders-of-horizons" target="_blank" rel="noopener noreferrer"
+                    class="btn btn-secondary btn-sm">
+                    View on Itch.io ↗
+                  </a>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- PROJECT 2: ChemiLab VR -->
+          <article class="project-card reversed" data-category="vr all">
+            <div class="project-media-col">
+              <img src="assets/images/chemilab_vr.jpg" alt="ChemiLab - Meta Quest 3 VR Puzzle Game" class="project-img">
+              <div class="project-media-badges">
+                <span class="media-tag highlight">META QUEST 3 STANDALONE</span>
+                <span class="media-tag">SOLO MVP</span>
+                <span class="media-tag">72 FPS OPTIMIZATION</span>
+              </div>
+              <div class="project-play-overlay">
+                <button class="btn btn-primary btn-sm" onclick="openProjectModal('chemilab')">
+                  Deep-Dive Architecture
+                </button>
+              </div>
+            </div>
+
+            <div class="project-content-col">
+              <div>
+                <span class="project-type-label">STANDALONE VR PUZZLE GAME (SOLO MVP)</span>
+                <h3 class="project-title">ChemiLab VR</h3>
+                <p class="project-subtitle">Meta Quest 3 Escape Room & Chemical Synthesis</p>
+                <p class="project-description">
+                  A solo-developed VR escape-room puzzle game built specifically for standalone Meta Quest 3. Players
+                  manipulate room-scale physical element blocks, synthesize chemical compounds to unlock secure vault
+                  locks, and navigate through hazard-laden laboratory chambers.
+                </p>
+
+                <ul class="tech-bullet-list">
+                  <li class="tech-bullet-item">
+                    <span class="bullet-icon">▸</span>
+                    <span><strong>Standalone VR Optimization:</strong> Achieved rock-solid 72 FPS on mobile XR chipset
+                      via low-poly asset pipelines, baked lightmaps, and draw-call reduction without sacrificing visual
+                      fidelity.</span>
+                  </li>
+                  <li class="tech-bullet-item">
+                    <span class="bullet-icon">▸</span>
+                    <span><strong>VFX Profiling & Bottleneck Fixes:</strong> Identified and resolved severe frame drops
+                      caused by particle overdraw; reduced emitter density and particle lifetimes to stabilize GPU frame
+                      timings.</span>
+                  </li>
+                  <li class="tech-bullet-item">
+                    <span class="bullet-icon">▸</span>
+                    <span><strong>Independent End-to-End Execution:</strong> Built gameplay systems, spatial grab
+                      mechanics, 3D lab environment in Blender, and custom audio assets independently in Unity.</span>
+                  </li>
+                </ul>
+              </div>
+
+              <div>
+                <div class="tech-stack-tags">
+                  <span class="stack-tag">Unity</span>
+                  <span class="stack-tag">Meta Quest 3</span>
+                  <span class="stack-tag">Blender</span>
+                  <span class="stack-tag">VR Optimization</span>
+                  <span class="stack-tag">VFX Profiling</span>
+                  <span class="stack-tag">ElevenLabs</span>
+                </div>
+
+                <div class="project-actions">
+                  <button class="btn btn-primary btn-sm" onclick="openProjectModal('chemilab')">
+                    Read Case Study
+                  </button>
+                  <a href="https://lgk205.itch.io/chemilab" target="_blank" rel="noopener noreferrer"
+                    class="btn btn-secondary btn-sm">
+                    View on Itch.io ↗
+                  </a>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- PROJECT 3: PatchBrief -->
+          <article class="project-card" data-category="tools all">
+            <div class="project-media-col">
+              <img src="assets/images/patchbrief_dashboard.jpg" alt="PatchBrief - Game Balance Decision Tool"
+                class="project-img">
+              <div class="project-media-badges">
+                <span class="media-tag highlight">HACKATHON TEAM LEAD</span>
+                <span class="media-tag">C# DETERMINISTIC PIPELINE</span>
+                <span class="media-tag">TELEMETRY ANALYTICS</span>
+              </div>
+              <div class="project-play-overlay">
+                <button class="btn btn-primary btn-sm" onclick="openProjectModal('patchbrief')">
+                  View Pipeline Brief
+                </button>
+              </div>
+            </div>
+
+            <div class="project-content-col">
+              <div>
+                <span class="project-type-label">GAME BALANCE DECISION TOOL</span>
+                <h3 class="project-title">PatchBrief</h3>
+                <p class="project-subtitle">Decision-Support Pipeline for Live-Service Game Designers</p>
+                <p class="project-description">
+                  Led a hackathon engineering team building an 8-layer deterministic decision-support tool. Helps game
+                  balance designers evaluate patch ramifications before shipping by correlating player match telemetry,
+                  hero brackets, design rules, and community sentiment.
+                </p>
+
+                <ul class="tech-bullet-list">
+                  <li class="tech-bullet-item">
+                    <span class="bullet-icon">▸</span>
+                    <span><strong>Owned Core Layers 5–7 in C#:</strong> Implemented Layer 5 (Impact & Alignment rule
+                      engine detecting high-elo vs casual divergence), Layer 6 (Risk framing & solution templates), and
+                      Layer 7 (Structured report generation with template fallback).</span>
+                  </li>
+                  <li class="tech-bullet-item">
+                    <span class="bullet-icon">▸</span>
+                    <span><strong>High-Performance Pipeline:</strong> Built with ASP.NET Core backend and
+                      React/TypeScript UI to ingest studio telemetry JSON schemas and map balance deltas.</span>
+                  </li>
+                  <li class="tech-bullet-item">
+                    <span class="bullet-icon">▸</span>
+                    <span><strong>Divergence Algorithms:</strong> Detected discrepancies between player community
+                      perception and empirical telemetry data to prevent over-nerfs.</span>
+                  </li>
+                </ul>
+              </div>
+
+              <div>
+                <div class="tech-stack-tags">
+                  <span class="stack-tag">C#</span>
+                  <span class="stack-tag">ASP.NET Core</span>
+                  <span class="stack-tag">React</span>
+                  <span class="stack-tag">TypeScript</span>
+                  <span class="stack-tag">LLM / Rule Engines</span>
+                  <span class="stack-tag">Telemetry Analytics</span>
+                </div>
+
+                <div class="project-actions">
+                  <button class="btn btn-primary btn-sm" onclick="openProjectModal('patchbrief')">
+                    Read Architecture Brief
+                  </button>
+                  <a href="https://github.com/dophucduy/AABW26_PatchBrief" target="_blank" rel="noopener noreferrer"
+                    class="btn btn-secondary btn-sm">
+                    GitHub Repo ↗
+                  </a>
+                </div>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- TECHNICAL SKILLS MATRIX -->
+    <section class="section skills-section" id="skills">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">// TECHNICAL CAPABILITIES</span>
+          <h2 class="section-title">Game Engineering & Systems Matrix</h2>
+          <p class="section-subtitle">
+            Core proficiencies across real-time game engines, graphics pipelines, system programming, and cloud
+            infrastructure.
+          </p>
+        </div>
+
+        <div class="skills-grid">
+
+          <!-- Card 1: Game Dev & Engines -->
+          <div class="skill-card">
+            <div class="skill-card-header">
+              <div class="skill-icon-box">🎮</div>
+              <div>
+                <h3 class="skill-card-title">Game Dev & XR</h3>
+                <span class="skill-card-sub">Unity, VR & 3D Art</span>
+              </div>
+            </div>
+
+            <ul class="skill-items-list">
+              <li>
+                <div class="skill-item-row">
+                  <span>Unity (C# Engine Architecture)</span>
+                  <span class="skill-item-badge">Primary</span>
+                </div>
+                <div class="skill-bar-bg">
+                  <div class="skill-bar-fill" style="width: 95%;"></div>
+                </div>
+              </li>
+              <li>
+                <div class="skill-item-row">
+                  <span>Meta Quest 3 Standalone XR</span>
+                  <span class="skill-item-badge">Shipped</span>
+                </div>
+                <div class="skill-bar-bg">
+                  <div class="skill-bar-fill" style="width: 90%;"></div>
+                </div>
+              </li>
+              <li>
+                <div class="skill-item-row">
+                  <span>Blender (Low-Poly 3D & UV Baking)</span>
+                  <span class="skill-item-badge">Proficient</span>
+                </div>
+                <div class="skill-bar-bg">
+                  <div class="skill-bar-fill" style="width: 85%;"></div>
+                </div>
+              </li>
+              <li>
+                <div class="skill-item-row">
+                  <span>Unity Terrain Tools & Environment</span>
+                  <span class="skill-item-badge">Proficient</span>
+                </div>
+                <div class="skill-bar-bg">
+                  <div class="skill-bar-fill" style="width: 88%;"></div>
+                </div>
+              </li>
+              <li>
+                <div class="skill-item-row">
+                  <span>Draw Call & VFX Profiling (Unity Profiler)</span>
+                  <span class="skill-item-badge">Advanced</span>
+                </div>
+                <div class="skill-bar-bg">
+                  <div class="skill-bar-fill" style="width: 90%;"></div>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Card 2: Programming Languages -->
+          <div class="skill-card">
+            <div class="skill-card-header">
+              <div class="skill-icon-box">⚡</div>
+              <div>
+                <h3 class="skill-card-title">Programming</h3>
+                <span class="skill-card-sub">Languages & OOP</span>
+              </div>
+            </div>
+
+            <ul class="skill-items-list">
+              <li>
+                <div class="skill-item-row">
+                  <span>C# (.NET / Unity Gameplay Scripting)</span>
+                  <span class="skill-item-badge">Expert</span>
+                </div>
+                <div class="skill-bar-bg">
+                  <div class="skill-bar-fill" style="width: 94%;"></div>
+                </div>
+              </li>
+              <li>
+                <div class="skill-item-row">
+                  <span>Java (Core / Clean OOP Architectures)</span>
+                  <span class="skill-item-badge">8.8 GPA</span>
+                </div>
+                <div class="skill-bar-bg">
+                  <div class="skill-bar-fill" style="width: 88%;"></div>
+                </div>
+              </li>
+              <li>
+                <div class="skill-item-row">
+                  <span>SQL & Relational Schemas</span>
+                  <span class="skill-item-badge">Solid</span>
+                </div>
+                <div class="skill-bar-bg">
+                  <div class="skill-bar-fill" style="width: 82%;"></div>
+                </div>
+              </li>
+              <li>
+                <div class="skill-item-row">
+                  <span>TypeScript / JavaScript</span>
+                  <span class="skill-item-badge">Full-Stack</span>
+                </div>
+                <div class="skill-bar-bg">
+                  <div class="skill-bar-fill" style="width: 85%;"></div>
+                </div>
+              </li>
+              <li>
+                <div class="skill-item-row">
+                  <span>Rule Engines & Telemetry Math</span>
+                  <span class="skill-item-badge">Applied</span>
+                </div>
+                <div class="skill-bar-bg">
+                  <div class="skill-bar-fill" style="width: 88%;"></div>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Card 3: Cloud & Tooling -->
+          <div class="skill-card">
+            <div class="skill-card-header">
+              <div class="skill-icon-box">☁️</div>
+              <div>
+                <h3 class="skill-card-title">Cloud & Systems</h3>
+                <span class="skill-card-sub">AWS, IaC & Dev Pipelines</span>
+              </div>
+            </div>
+
+            <ul class="skill-items-list">
+              <li>
+                <div class="skill-item-row">
+                  <span>AWS Services (Lambda, S3, CloudFront)</span>
+                  <span class="skill-item-badge">FCJ Alum</span>
+                </div>
+                <div class="skill-bar-bg">
+                  <div class="skill-bar-fill" style="width: 86%;"></div>
+                </div>
+              </li>
+              <li>
+                <div class="skill-item-row">
+                  <span>AWS CDK & DynamoDB & Athena</span>
+                  <span class="skill-item-badge">Hackathon</span>
+                </div>
+                <div class="skill-bar-bg">
+                  <div class="skill-bar-fill" style="width: 82%;"></div>
+                </div>
+              </li>
+              <li>
+                <div class="skill-item-row">
+                  <span>Infrastructure-as-Code (IaC)</span>
+                  <span class="skill-item-badge">Solid</span>
+                </div>
+                <div class="skill-bar-bg">
+                  <div class="skill-bar-fill" style="width: 80%;"></div>
+                </div>
+              </li>
+              <li>
+                <div class="skill-item-row">
+                  <span>Git Version Control & CI/CD</span>
+                  <span class="skill-item-badge">Daily</span>
+                </div>
+                <div class="skill-bar-bg">
+                  <div class="skill-bar-fill" style="width: 90%;"></div>
+                </div>
+              </li>
+              <li>
+                <div class="skill-item-row">
+                  <span>English Proficiency (IELTS 6.5)</span>
+                  <span class="skill-item-badge">Certified</span>
+                </div>
+                <div class="skill-bar-bg">
+                  <div class="skill-bar-fill" style="width: 85%;"></div>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- EXPERIENCE & EDUCATION -->
+    <section class="section" id="experience">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">// BACKGROUND & TRACK RECORD</span>
+          <h2 class="section-title">Education & Relevant Experience</h2>
+          <p class="section-subtitle">
+            Strong foundation in computer science, proven under-pressure hackathon execution, and certified cloud
+            training.
+          </p>
+        </div>
+
+        <div class="timeline-grid">
+
+          <!-- Column 1: Education -->
+          <div class="timeline-column">
+            <h3 class="timeline-heading">
+              <span>🎓</span> Education & Academic Foundation
+            </h3>
+
+            <div class="timeline-card">
+              <span class="timeline-date-badge">09/2023 – PRESENT</span>
+              <h4 class="timeline-title">FPT University Ho Chi Minh</h4>
+              <p class="timeline-institution">Bachelor of Science in Software Engineering</p>
+              <p class="timeline-body">
+                Pursuing comprehensive software engineering degree with strong focus on computer systems,
+                object-oriented software patterns, data structures, and computer science fundamentals.
+              </p>
+              <div class="grade-badge-group">
+                <span class="grade-pill">PRF192 (Fundamental Programming): 8.8 / 10</span>
+                <span class="grade-pill">CSI104 (Computer Science): 9.0 / 10</span>
+              </div>
+            </div>
+
+            <div class="timeline-card">
+              <span class="timeline-date-badge">CERTIFIED</span>
+              <h4 class="timeline-title">Language Proficiency</h4>
+              <p class="timeline-institution">International English Language Testing System</p>
+              <p class="timeline-body">
+                Scored <strong>IELTS 6.5</strong> overall. Fluent in technical documentation, international code
+                reviews, and remote team communication. Native Vietnamese speaker.
+              </p>
+            </div>
+          </div>
+
+          <!-- Column 2: Experience & Hackathons -->
+          <div class="timeline-column">
+            <h3 class="timeline-heading">
+              <span>⚡</span> Programs & Competitive Sprints
+            </h3>
+
+            <div class="timeline-card">
+              <span class="timeline-date-badge">INTENSIVE PROGRAM</span>
+              <h4 class="timeline-title">AWS First Cloud Journey (FCJ) Program</h4>
+              <p class="timeline-institution">Trainee / Participant</p>
+              <p class="timeline-body">
+                Successfully completed the rigorous AWS FCJ program. Acquired hands-on practical experience designing
+                cloud architectures, microservices, serverless functions, and infrastructure deployment pipelines.
+              </p>
+            </div>
+
+            <div class="timeline-card">
+              <span class="timeline-date-badge">36-HOUR RAPID PROTOTYPE</span>
+              <h4 class="timeline-title">Lotus Hackathon</h4>
+              <p class="timeline-institution">Top 21 Raw Rank / Top 17 AWS Track</p>
+              <p class="timeline-body">
+                Architected and deployed full cloud infrastructure under a strict 36-hour sprint deadline, utilizing
+                resilient AWS services for low-latency data processing and high availability.
+              </p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT / RECRUITER FAST-TRACK -->
+    <section class="section contact-section" id="contact">
+      <div class="container">
+        <div class="contact-card">
+
+          <!-- Contact Direct Info -->
+          <div class="contact-info-col">
+            <div>
+              <span class="section-tag">// RECRUITER FAST-TRACK</span>
+              <h2 class="contact-lead">Let's Build Great Games Together</h2>
+              <p class="contact-text">
+                Currently open to <strong>Game Developer / Gameplay Engineer / VR Developer</strong> positions.
+                Available for full-time, hybrid, or remote opportunities worldwide.
+              </p>
+            </div>
+
+            <div class="contact-methods">
+              <!-- Email Item with Copy Trigger -->
+              <div class="contact-item-row">
+                <div class="contact-item-left">
+                  <div class="contact-item-icon">✉</div>
+                  <div>
+                    <div class="contact-item-label">Direct Email</div>
+                    <div class="contact-item-val">lamgiakiet.2005@gmail.com</div>
+                  </div>
+                </div>
+                <button class="btn btn-secondary btn-sm" id="copyEmailBtn" title="Copy to clipboard">Copy</button>
+              </div>
+
+              <!-- Phone Item -->
+              <div class="contact-item-row">
+                <div class="contact-item-left">
+                  <div class="contact-item-icon">📞</div>
+                  <div>
+                    <div class="contact-item-label">Phone & Zalo</div>
+                    <div class="contact-item-val">(+84) 886659957</div>
+                  </div>
+                </div>
+                <a href="tel:+84886659957" class="btn btn-secondary btn-sm">Call</a>
+              </div>
+
+              <!-- LinkedIn Item -->
+              <div class="contact-item-row">
+                <div class="contact-item-left">
+                  <div class="contact-item-icon">💼</div>
+                  <div>
+                    <div class="contact-item-label">LinkedIn Profile</div>
+                    <div class="contact-item-val">lam-kiet-b79560304</div>
+                  </div>
+                </div>
+                <a href="https://www.linkedin.com/in/lam-kiet-b79560304/" target="_blank" rel="noopener noreferrer"
+                  class="btn btn-secondary btn-sm">Connect ↗</a>
+              </div>
+
+              <!-- Resume Download -->
+              <div class="contact-item-row">
+                <div class="contact-item-left">
+                  <div class="contact-item-icon">📄</div>
+                  <div>
+                    <div class="contact-item-label">Official Resume</div>
+                    <div class="contact-item-val">Lam_Gia_Kiet_Resume.pdf</div>
+                  </div>
+                </div>
+                <a href="Lam_Gia_Kiet_Resume.pdf" download="Lam_Gia_Kiet_Resume.pdf"
+                  class="btn btn-primary btn-sm">Download</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Quick Dispatch Message Form -->
+          <div class="contact-form-col">
+            <h3 style="font-size: 1.35rem; font-weight: 700; margin-bottom: 0.5rem;">Send A Quick Transmission</h3>
+            <p style="font-size: 0.88rem; color: var(--text-muted); margin-bottom: 1.25rem;">
+              Have an open role or indie project collaboration? Send a note directly to my inbox.
+            </p>
+
+            <form id="contactForm">
+              <div class="form-group">
+                <label for="contactName" class="form-label">Recruiter / Studio Name</label>
+                <input type="text" id="contactName" class="form-input"
+                  placeholder="e.g. Ubisoft, Gameloft, Riot Games..." required>
+              </div>
+
+              <div class="form-group">
+                <label for="contactEmail" class="form-label">Contact Email</label>
+                <input type="email" id="contactEmail" class="form-input" placeholder="recruiter@studio.com" required>
+              </div>
+
+              <div class="form-group">
+                <label for="contactMessage" class="form-label">Message / Role Overview</label>
+                <textarea id="contactMessage" class="form-textarea"
+                  placeholder="We would love to discuss our open Unity / Gameplay Engineer role with you..."
+                  required></textarea>
+              </div>
+
+              <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 0.5rem;"
+                id="submitContactBtn">
+                Transmit Message
+              </button>
+            </form>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- SITE FOOTER -->
+  <footer class="site-footer">
+    <div class="container footer-content">
+      <div>
+        © 2026 <strong>Lam Gia Kiet</strong> • Built with Vanilla Web Standards & Native Web Audio.
+      </div>
+      <div class="footer-hotkeys">
+        <span>HOTKEYS:</span>
+        <span><kbd>[M]</kbd> Mute Audio</span>
+        <span><kbd>[G]</kbd> Game Lab</span>
+        <span><kbd>[R]</kbd> Resume</span>
+        <span><kbd>[C]</kbd> Contact</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- CASE STUDY DETAILS MODAL -->
+  <div class="modal-overlay" id="projectModal" role="dialog" aria-modal="true" aria-labelledby="modalDynamicTitle">
+    <div class="modal-container">
+      <button class="modal-close-btn" id="modalCloseBtn" aria-label="Close Case Study Modal">×</button>
+      <div id="modalDynamicContent">
+        <!-- Dynamically injected via js/main.js -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Main Scripts -->
+  <script src="js/audio-fx.js"></script>
+  <script src="js/game-demo.js"></script>
+  <script src="js/main.js"></script>
+</body>
+
+</html>
